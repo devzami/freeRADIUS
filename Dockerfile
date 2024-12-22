@@ -6,11 +6,10 @@ RUN apt-get update && apt-get install -y \
     nano \
     libaio1 \
     wget \
-    unzip && \
-    # Download and install Oracle Instant Client (adjust version if needed)
+    unzip \
+    alien && \  # Add 'alien' to convert RPM to DEB
     wget -q https://download.oracle.com/otn_software/linux/instantclient/213000/oracle-instantclient-basiclite-21.3.0.0.0-1.x86_64.rpm && \
-    dpkg -i oracle-instantclient-basiclite-21.3.0.0.0-1.x86_64.rpm && \
-    # Clean up the RPM and unnecessary apt cache
+    alien -i oracle-instantclient-basiclite-21.3.0.0.0-1.x86_64.rpm && \  # Convert and install
     rm -f oracle-instantclient-basiclite-21.3.0.0.0-1.x86_64.rpm && \
     rm -rf /var/lib/apt/lists/*
 
