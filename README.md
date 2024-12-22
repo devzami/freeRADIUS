@@ -123,3 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### 🔑 Support
 
 For any issues or support requests, feel free to open an issue in this repository.
+
+### 🐳 Docker Image
+
+[![Docker](https://img.shields.io/badge/Docker-Image-blue?logo=docker)](https://hub.docker.com/r/devzami/freeradius)
