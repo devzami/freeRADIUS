@@ -86,6 +86,17 @@ The container includes the following configuration files for testing purposes:
   ```
 
 - **sql.conf**: Configures SQL-related settings for database interaction (this is left for you to configure based on your setup).
+  Example of `authorize` file:
+  ```bash
+  sql {
+       driver = "oracle"
+       server = "oracle-server"
+       port = 1521
+       login = "schema-username"
+       password = "schema-password"
+       radius_db = "oracle_sid"
+   }
+  ```
 
 ### 📦 Dependencies
 
