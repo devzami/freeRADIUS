@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 # Set Oracle environment variables
 ENV ORACLE_HOME=/usr/lib/oracle/21/client64
-ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
+ENV LD_LIBRARY_PATH=$ORACLE_HOME/lib
 ENV TNS_ADMIN=$ORACLE_HOME/network/admin
 
 # Copy the custom FreeRADIUS configuration directory into the container
