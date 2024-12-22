@@ -123,13 +123,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### 🔑 Support
 
 For any issues or support requests, feel free to open an issue in this repository.
-```
-
-This full `README.md` includes:
-- **Icons** to enhance readability and guide users through steps.
-- **Detailed instructions** for building the image, running the container, testing with `radtest`, and configuring the RADIUS server.
-- **Example configuration** files for FreeRADIUS.
-- **Cleanup steps** for maintaining a lean Docker image.
-- **License** section for clarity on project terms.
-
-This should help provide clear documentation for anyone using or modifying your FreeRADIUS Docker image.
