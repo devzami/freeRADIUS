@@ -6,6 +6,42 @@ This repository contains a Dockerfile to build a FreeRADIUS server with Oracle I
 
 ## 🚀 Quick Start
 
+### 📂 Configuration Files
+
+The container includes the following configuration files for testing purposes:
+
+- **clients.conf**: Defines the client configuration for the FreeRADIUS server.
+
+  Example of `clients.conf`:
+  ```bash
+  client dockernet {
+      ipaddr = 172.17.0.0/16
+      secret = testing123
+  }
+  ```
+
+- **authorize**: Defines the test user for authentication.
+
+  Example of `authorize` file:
+  ```bash
+  bob    Cleartext-Password := "test"
+  ```
+
+- **sql.conf**: Configures SQL-related settings for database interaction (this is left for you to configure based on your setup).
+
+  Example of `sql.conf` file:
+  ```bash
+  sql {
+       driver = "oracle"
+       server = "oracle-server"
+       port = 1521
+       login = "schema-username"
+       password = "schema-password"
+       radius_db = "oracle_sid"
+   }
+  ```
+
+  
 ### 🛠️ Build the Docker Image
 
 To build the FreeRADIUS Docker image locally, run the following command:
@@ -63,41 +99,6 @@ Once inside the container, test using the container's local IP address:
 ```bash
 radtest bob test 172.17.0.1 0 testing123
 ```
-
-### 📂 Configuration Files
-
-The container includes the following configuration files for testing purposes:
-
-- **clients.conf**: Defines the client configuration for the FreeRADIUS server.
-
-  Example of `clients.conf`:
-  ```bash
-  client dockernet {
-      ipaddr = 172.17.0.0/16
-      secret = testing123
-  }
-  ```
-
-- **authorize**: Defines the test user for authentication.
-
-  Example of `authorize` file:
-  ```bash
-  bob    Cleartext-Password := "test"
-  ```
-
-- **sql.conf**: Configures SQL-related settings for database interaction (this is left for you to configure based on your setup).
-
-  Example of `sql.conf` file:
-  ```bash
-  sql {
-       driver = "oracle"
-       server = "oracle-server"
-       port = 1521
-       login = "schema-username"
-       password = "schema-password"
-       radius_db = "oracle_sid"
-   }
-  ```
 
 ### 📦 Dependencies
 
