@@ -91,7 +91,6 @@ The FreeRADIUS server container includes the following dependencies:
 
 - **FreeRADIUS Server**: Base image for FreeRADIUS.
 - **nano**: Text editor for easy file editing inside the container.
-- **libaio1**: A library required for Oracle Instant Client.
 
 ### 🔒 Exposed Ports
 
@@ -104,7 +103,6 @@ The FreeRADIUS container exposes the following ports:
 
 The build process cleans up unnecessary files, including:
 
-- The **RPM** package for Oracle Instant Client after installation.
 - Temporary **apt** cache files to reduce the image size.
 
 ### 🛠️ Customizing Configuration
