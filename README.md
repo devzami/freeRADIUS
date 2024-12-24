@@ -1,4 +1,4 @@
-# 🐳 FreeRADIUS Docker Image
+# 🐳 FreeRADIUS Docker Image With Test Configurations
 
 [![Docker](https://img.shields.io/badge/Docker-Image-blue?logo=docker)](https://hub.docker.com/r/devzami/freeradius)
 
