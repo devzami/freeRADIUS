@@ -2,7 +2,7 @@
 
 [![Docker](https://img.shields.io/badge/Docker-Image-blue?logo=docker)](https://hub.docker.com/r/devzami/freeradius)
 
-This repository contains a Dockerfile to build a FreeRADIUS server with Oracle Instant Client support, along with basic configurations for testing.
+This repository contains a Dockerfile to build a FreeRADIUS server with basic configurations for testing.
 
 ## 🚀 Quick Start
 
@@ -26,21 +26,6 @@ The container includes the following configuration files for testing purposes:
   ```bash
   bob    Cleartext-Password := "test"
   ```
-
-- **sql.conf**: Configures SQL-related settings for database interaction (this is left for you to configure based on your setup).
-
-  Example of `sql.conf` file:
-  ```bash
-  sql {
-       driver = "oracle"
-       server = "oracle-server"
-       port = 1521
-       login = "schema-username"
-       password = "schema-password"
-       radius_db = "oracle_sid"
-   }
-  ```
-
   
 ### 🛠️ Build the Docker Image
 
@@ -105,7 +90,6 @@ radtest bob test 172.17.0.1 0 testing123
 The FreeRADIUS server container includes the following dependencies:
 
 - **FreeRADIUS Server**: Base image for FreeRADIUS.
-- **Oracle Instant Client**: Installed to allow integration with Oracle databases.
 - **nano**: Text editor for easy file editing inside the container.
 - **libaio1**: A library required for Oracle Instant Client.
 
